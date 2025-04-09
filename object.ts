@@ -24,3 +24,19 @@ common = {
     ...user,
     ...address
 }
+
+
+type TypePerson = { 
+    age: number
+}
+
+type TypeUserPerson = {
+    name: string
+    email: string
+} & TypePerson
+
+const userPerson: TypeUserPerson = {
+    email: 'example@gmail.com',
+    name: 'Joe',
+    age: 21
+}
